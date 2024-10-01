@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "33bdc687-40c8-48d0-a3de-53648d7f655d",
+		"name": "Monumentos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38617670"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/monumentos/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/monumentos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monumentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/monumentos/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/monumentos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monumentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/monumentos/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"nombrePais\": \"Inglaterra\",\r\n    \"codigoPais\": \"EN\",\r\n    \"latitud\": 40.416775,\r\n    \"longitud\": -3.70379,\r\n    \"nombreCiudad\": \"Londres\",\r\n    \"nombreMonumento\": \"Big Ben\",\r\n    \"descripcion\": \"Reloj tela de golfo.\",\r\n    \"urlFoto\": \"http://example.com/bigben.jpg\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/monumentos/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monumentos",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/monumentos/edit/2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/monumentos/edit/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monumentos",
+						"edit",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/monumentos/delete/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nombrePais\": \"Portugal\",\r\n    \"codigoPais\": \"PT\",\r\n    \"latitud\": 38.691583,\r\n    \"longitud\": -9.215,\r\n    \"nombreCiudad\": \"Lisboa\",\r\n    \"nombreMonumento\": \"Estádio da Luz\",\r\n    \"descripcion\": \"Estadio del SL Benfica.\",\r\n    \"urlFoto\": \"http://example.com/estadiodaluz.jpg\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/monumentos/delete/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monumentos",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
