@@ -1,5 +1,6 @@
 package com.salesianos.triana.dam.monumentos.initData;
 
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,7 @@ public class InitData {
 
     private final MonumentoRepository repo;
 
-    @jakarta.annotation.PostConstruct
+    @PostConstruct
     public void init() {
 
         Monumento puertaDelSol = new Monumento();
@@ -22,9 +23,9 @@ public class InitData {
         puertaDelSol.setNombreCiudad("Madrid");
         puertaDelSol.setLatitud(40.416775);
         puertaDelSol.setLongitud(-3.703790);
-        puertaDelSol.setNombreMonumento("Puerta del Sol");
+        puertaDelSol.setNombreMonumento("Estadio Santiago Bernabéu");
         puertaDelSol.setDescripcion("Un famoso punto de referencia en Madrid.");
-        puertaDelSol.setUrlFoto("http://example.com/puerta_del_sol.jpg");
+        puertaDelSol.setUrlFoto("http://example.com/bernabeu.jpg");
 
         repo.save(puertaDelSol);
 

@@ -8,11 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+
 
 @Entity
 @Data
@@ -27,12 +24,31 @@ public class Monumento {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private long id;
 
-        private String nombrePais, nombreCiudad, nombreMonumento, descripcion, urlFoto;
+        @Column(nullable = false)
+        private String nombrePais;
 
         @Column(nullable = false, length = 2)
         private String codigoPais;
 
-        private double latitud, longitud;
+        @Column(nullable = false)
+        private double latitud;
+
+        @Column(nullable = false)
+        private double longitud;
+
+        @Column(nullable = false)
+        private String nombreCiudad;
+
+        @Column(nullable = false)
+        private String nombreMonumento;
+
+        @Column(nullable = false, length = 2500)
+        private String descripcion;
+
+        @Column(nullable = false)
+        private String urlFoto;
+
+
 
 
 
