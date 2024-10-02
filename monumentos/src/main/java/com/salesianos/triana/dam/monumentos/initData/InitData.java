@@ -17,7 +17,7 @@ public class InitData {
     @PostConstruct
     public void init() {
 
-        Monumento puertaDelSol = new Monumento();
+        Bar paleta = new Bar();
         puertaDelSol.setCodigoPais("ES");
         puertaDelSol.setNombrePais("España");
         puertaDelSol.setNombreCiudad("Madrid");

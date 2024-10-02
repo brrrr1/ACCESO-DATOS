@@ -16,40 +16,34 @@ import jakarta.persistence.GenerationType;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Monumento {
-
+public class Bares {
 
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private long id;
 
-        @Column(nullable = false)
-        private String nombrePais;
-
-        @Column(nullable = false, length = 2)
-        private String codigoPais;
 
         @Column(nullable = false)
-        private double latitud;
+        private String nombre;
+
 
         @Column(nullable = false)
-        private double longitud;
+        private String direccion;
+
 
         @Column(nullable = false)
-        private String nombreCiudad;
+        private double latitud, longitud;
 
-        @Column(nullable = false)
-        private String nombreMonumento;
 
-        @Column(nullable = false, length = 2500)
+        @Column(nullable = false, length = 200)
         private String descripcion;
 
+
         @Column(nullable = false)
-        private String urlFoto;
+        private String tags;
 
 
-
-
-
+        @Column(nullable = false)
+        private String urlImagen;
 }
