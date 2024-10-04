@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/place")
@@ -48,13 +49,13 @@ public class BaresController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Bares> modificarBar(@RequestBody Bares b, @PathVariable Long id) {
-        Bares barModificado = servicio.modificarBar(b, id);
-        if (id == null) {
+        Optional<Bares> barOptional = Optional.ofNullable(servicio.getBarById(id));
+        if (!barOptional.isPresent()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+        Bares barModificado = servicio.modificarBar(b, id);
         return ResponseEntity.ok(barModificado);
     }
-
     /*
     Agregar un tag a un restaurante pasando un id**
     */
